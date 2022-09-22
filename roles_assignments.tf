@@ -49,3 +49,12 @@ resource "snowflake_role_grants" "dbt_role_assign" {
   ]
 
 }
+
+resource "snowflake_role_grants" "integration_full_assign" {
+  role_name = "integration_full"
+
+  roles = [
+    "data_engineer_role",
+  ]
+
+}
