@@ -58,3 +58,30 @@ resource "snowflake_role_grants" "integration_full_assign" {
   ]
 
 }
+
+resource "snowflake_role_grants" "datamart_rw_assign" {
+  role_name = "datamart_rw"
+
+  roles = [
+    "dbt_role",
+  ]
+
+}
+
+resource "snowflake_role_grants" "int_r_assign" {
+  role_name = "integration_r"
+
+  roles = [
+    "data_scientist_role",
+  ]
+
+}
+
+resource "snowflake_role_grants" "raw_f_assign" {
+  role_name = "raw_full"
+
+  roles = [
+    "etl_role",
+  ]
+
+}
