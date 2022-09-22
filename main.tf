@@ -16,6 +16,7 @@ terraform {
 }
 
 provider "snowflake" {
+  region   = "sa-east-1.aws"
 }
 
 resource "snowflake_database" "demo_db" {
