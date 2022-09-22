@@ -21,4 +21,3 @@ resource "snowflake_database_grant" "datamart_rw_grant" {
   with_grant_option = false
 
 }
-
