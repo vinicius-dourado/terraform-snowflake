@@ -12,10 +12,10 @@ resource "snowflake_role_grants" "data_scientist_assign" {
 }
 
 resource "snowflake_role_grants" "integration_r_assign" {
-  role_name = "integration_r_role"
+  role_name = "integration_r"
 
   roles = [
-    "data_scientist",
+    "data_scientist_role",
   ]
 
 }
