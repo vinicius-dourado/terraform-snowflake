@@ -1,6 +1,6 @@
 resource snowflake_warehouse_grant grant {
   warehouse_name = "COMPUTE_WH"
-  privilege      = "USAGE"
+  privilege      = "MODIFY"
 
   roles = [
     "etl_role",
