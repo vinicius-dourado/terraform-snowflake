@@ -11,7 +11,6 @@ resource "snowflake_user" "user_etl" {
 resource "snowflake_user" "user_gabriel" {
   name    = "gabriel"
   comment = "for testing"
-  default_role = "data_engineer_role"
 }
 
 resource "snowflake_user" "user_joao" {
