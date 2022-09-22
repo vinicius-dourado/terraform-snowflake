@@ -10,7 +10,7 @@ resource "snowflake_warehouse_grant" "access_grant" {
 
 }
 
-resource "snowflake_database_grant" "datamart_rw_grant" {
+resource "snowflake_database_grant" "datamart_grant" {
   database_name = "datamart_db"
   privilege      = "USAGE"
 
