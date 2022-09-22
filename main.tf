@@ -18,7 +18,17 @@ terraform {
 provider "snowflake" {
 }
 
-resource "snowflake_database" "demo_db" {
-  name    = "DEMO_DB"
-  comment = "Database for Snowflake Terraform demo"
+resource "snowflake_database" "raw_db" {
+  name    = "RAW_DB"
+  comment = "Database for Snowflake Terraform demo - Raw"
+}
+
+resource "snowflake_database" "integration_db" {
+  name    = "INTEGRATION_DB"
+  comment = "Database for Snowflake Terraform demo - Integration"
+}
+
+resource "snowflake_database" "datamart_db" {
+  name    = "DATAMART_DB"
+  comment = "Database for Snowflake Terraform demo - Datamart"
 }
