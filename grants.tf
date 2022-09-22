@@ -1,4 +1,4 @@
-resource snowflake_warehouse_grant grant {
+resource "snowflake_warehouse_grant" "etl_role_grant" {
   warehouse_name = "COMPUTE_WH"
   privilege      = "MODIFY"
 
@@ -7,4 +7,5 @@ resource snowflake_warehouse_grant grant {
   ]
 
   with_grant_option = false
+
 }
