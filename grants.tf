@@ -1,4 +1,4 @@
-resource "snowflake_database_grant" "integration_r_grant" {
+resource snowflake_database_grant grant {
   database_name = "integration_db"
 
   privilege = "USAGE"
