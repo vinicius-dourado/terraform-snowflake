@@ -1,20 +1,22 @@
-resource "snowflake_role_grants" "raw_full_assign" {
-  role_name = "raw_full"
+resource "snowflake_role_grants" "data_scientist_assign" {
+  role_name = "data_scientist_role"
 
   roles = [
     "ACCOUNTADMIN",
-    "data_engineer_role",
+  ]
+
+  users = [
+    "joao",
   ]
 
 }
 
 resource "snowflake_role_grants" "integration_r_assign" {
-  role_name = "integration_r"
+  role_name = "integration_r_role"
 
   roles = [
-    "ACCOUNTADMIN",
-    "data_scientist_role",
-    "dbt_role",
+    "data_scientist",
   ]
 
 }
+
