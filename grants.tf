@@ -1,8 +1,10 @@
-resource snowflake_database_grant grant {
-  database_name = "integration_db"
+resource snowflake_warehouse_grant grant {
+  warehouse_name = "COMPUTE_WH"
+  privilege      = "USAGE"
 
-  privilege = "USAGE"
-  roles     = ["etl_role",]
+  roles = [
+    "etl_role",
+  ]
 
   with_grant_option = false
 }
