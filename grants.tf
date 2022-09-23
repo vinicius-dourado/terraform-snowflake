@@ -34,3 +34,16 @@ resource "snowflake_schema_grant" "datamart_schema_grant" {
   with_grant_option = false
 
 }
+
+resource "snowflake_table_grant" "datamart_table_grant" {
+  database_name = "DATAMART_DB"
+
+  privilege = "ALL"
+  roles = [
+    "datamart_rw",
+  ]
+
+  on_future         = true
+  with_grant_option = false
+
+}
