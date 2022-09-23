@@ -6,8 +6,6 @@ resource "snowflake_warehouse_grant" "access_grant" {
     "raw_full","integration_full","integration_r","datamart_rw",
   ]
 
-  with_grant_option = false
-
 }
 
 resource "snowflake_warehouse_grant" "access_grant2" {
@@ -17,7 +15,5 @@ resource "snowflake_warehouse_grant" "access_grant2" {
   roles = [
     "raw_full","integration_full","integration_r","datamart_rw",
   ]
-
-  with_grant_option = false
 
 }
