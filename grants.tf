@@ -6,4 +6,18 @@ resource "snowflake_warehouse_grant" "access_grant" {
     "raw_full","integration_full","integration_r","datamart_rw",
   ]
 
+  with_grant_option = false
+  
+}
+
+resource "snowflake_database_grant" "datamart_grant" {
+  database_name = "DATAMART_DB"
+  privilege      = "USAGE"
+
+  roles = [
+    "datamart_rw",
+  ]
+
+  with_grant_option = false
+
 }
