@@ -38,7 +38,7 @@ resource "snowflake_schema_grant" "datamart_schema_grant" {
 resource "snowflake_table_grant" "datamart_table_grant" {
   database_name = "DATAMART_DB"
 
-  privilege = "ALL"
+  privilege = "SELECT"
   roles = [
     "datamart_rw",
   ]
