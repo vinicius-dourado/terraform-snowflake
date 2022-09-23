@@ -48,3 +48,17 @@ resource "snowflake_table_grant" "datamart_table_grant" {
   with_grant_option = false
 
 }
+
+resource "snowflake_table_grant" "integration_table_grant" {
+  database_name = "INTEGRATION_DB"
+
+  for_each = toset( ["SELECT"] )
+  privilege = each.key
+  roles = [
+    "integration_r",
+  ]
+
+  on_future         = true
+  with_grant_option = false
+
+}
