@@ -38,7 +38,8 @@ resource "snowflake_schema_grant" "datamart_schema_grant" {
 resource "snowflake_table_grant" "datamart_table_grant" {
   database_name = "DATAMART_DB"
 
-  privilege = "ALL PRIVILEGES"
+  for_each = toset( ["SELECT", "UPDATE", "INSERT", "UPDATE"] )
+  privilege = each.key
   roles = [
     "datamart_rw",
   ]
