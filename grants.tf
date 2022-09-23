@@ -10,7 +10,7 @@ resource "snowflake_warehouse_grant" "access_grant" {
 
 }
 
-resource "snowflake_warehouse_grant" "access_grant" {
+resource "snowflake_warehouse_grant" "access_grant2" {
   warehouse_name = "COMPUTE_WH"
   privilege      = "MODIFY"
 
