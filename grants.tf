@@ -10,12 +10,12 @@ resource "snowflake_warehouse_grant" "access_grant" {
 
 }
 
-resource "snowflake_database_grant" "datamart_grant" {
-  database_name = "datamart_db"
-  privilege      = "USAGE"
+resource "snowflake_warehouse_grant" "access_grant" {
+  warehouse_name = "COMPUTE_WH"
+  privilege      = "MODIFY"
 
   roles = [
-    "datamart_rw",
+    "raw_full","integration_full","integration_r","datamart_rw",
   ]
 
   with_grant_option = false
