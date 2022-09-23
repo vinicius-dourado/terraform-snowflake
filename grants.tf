@@ -18,7 +18,6 @@ resource "snowflake_database_grant" "datamart_grant" {
     "datamart_rw",
   ]
 
-  on_future         = false
   with_grant_option = false
 
 }
