@@ -21,3 +21,15 @@ resource "snowflake_database_grant" "datamart_grant" {
   with_grant_option = false
 
 }
+
+resource "snowflake_database_grant" "datamart_grant_tables" {
+  database_name = "DATAMART_DB"
+  privilege      = "CREATE TABLE - FUTURE SCHEMA"
+
+  roles = [
+    "datamart_rw",
+  ]
+
+  with_grant_option = false
+
+}
