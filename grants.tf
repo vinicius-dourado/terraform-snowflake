@@ -12,7 +12,7 @@ resource "snowflake_warehouse_grant" "access_grant" {
 
 resource "snowflake_database_grant" "datamart_grant" {
   database_name = "DATAMART_DB"
-  privilege      = ["USAGE","SELECT","INSERT","DELETE","UPDATE"]
+  privilege      = ["CREATE SCHEMA"]
 
   roles = [
     "datamart_rw",
