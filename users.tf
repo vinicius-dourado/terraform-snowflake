@@ -17,3 +17,8 @@ resource "snowflake_user" "user_joao" {
   name    = "joao"
   comment = "for testing"
 }
+
+resource "snowflake_user" "user_fivetran" {
+  name    = "fivetran_user"
+  comment = "for testing"
+}
